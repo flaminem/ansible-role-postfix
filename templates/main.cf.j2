@@ -39,6 +39,8 @@ smtp_tls_policy_maps = hash:/etc/postfix/tls_policy
 # information on enabling SSL in the smtp client.
 
 myhostname = {{postfix_hostname}}
+mydomain = {{postfix_mydomain}}
+myorigin = $mydomain
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 mydestination = {{postfix_mydestination}}
