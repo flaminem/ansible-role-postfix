@@ -38,16 +38,16 @@ smtp_tls_policy_maps = hash:/etc/postfix/tls_policy
 # See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
 # information on enabling SSL in the smtp client.
 
-myhostname = {{postfix_hostname}}
-mydomain = {{postfix_mydomain}}
+myhostname = {{ postfix_hostname }}
+mydomain = {{ postfix_mydomain }}
 myorigin = $mydomain
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
-mydestination = {{postfix_mydestination}}
-relayhost = {{postfix_relay_server}}
-mynetworks = {{postfix_networks}}
-relay_domains = {{postfix_relay_domains}}
+mydestination = {{ postfix_mydestination }}
+relayhost = {{ postfix_relay_server }}
+mynetworks = {{ postfix_networks }}
+relay_domains = {{ postfix_relay_domains }}
 mailbox_size_limit = 0
 recipient_delimiter = +
-inet_interfaces = {{postfix_inet_interfaces}}
-inet_protocols = {{postfix_inet_protocols}}
+inet_interfaces = {{ postfix_inet_interfaces }}
+inet_protocols = {{ postfix_inet_protocols }}
